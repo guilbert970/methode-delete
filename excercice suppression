@@ -1,0 +1,15 @@
+app delete('api/movies/:id, (req, res) => {
+const movies = req.params.id;
+connection.querry(
+'DELETE FROM movies WHERE id = ? ',
+[moviesId],
+(err result) => {
+if(err) {
+console.log(err);
+res.status(500).send ('err lors de la suppression de  movies');
+}else{
+res.status(200).sen('errsuppression movies');
+}
+}
+);
+});
